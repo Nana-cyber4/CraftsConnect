@@ -5,6 +5,8 @@
 // const userAvatar = document.querySelector('.user-avatar i');
 // const accountDropdown = document.querySelector('.account-dropdown');
 
+// const { add } = require("nodemon/lib/rules");
+
 // const parse = require("nodemon/lib/cli/parse");
 
 // let showOverlay = function() {
@@ -69,7 +71,14 @@ const increaseBtn = document.querySelector('.increase-btn');
 const decreaseBtn = document.querySelector('.decrease-btn');
 const qty = document.querySelector('.qty-num');
 const cart = document.querySelector('.cart-number');
+const addToCartBtn = document.querySelectorAll('#featured-products .featured-card .add-to-cart-btn');
 
+
+addToCartBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+        storeCartItem(1);
+    })
+})
 
 let increaseQty = function() {
     qty.textContent = parseInt(qty.textContent) + 1;
@@ -83,9 +92,32 @@ let decreaseQty = function() {
     }
 };
 
-let detailAddToCart = function() {
-    cart.textContent = parseInt(cart.textContent) + parseInt(qty.textContent);
+// let craftsAddToCart = function() {
+//     console.log(this);    
+// };
+
+let storeCartItem = function(qty) {
+    cart.textContent = parseInt(cart.textContent) + parseInt(qty);
+    localStorage.setItem('cart', cart.textContent);
+    return localStorage.getItem('cart');
 };
+
+let detailQty = function() {
+    return qty.textContent;
+};
+
+
+let detailAddToCart = function() {
+    storeCartItem(detailQty());
+};
+
+
+if (localStorage.getItem('cart')) {
+    cart.textContent = localStorage.getItem('cart');
+} else {
+    cart.textContent = 0;
+}
+
 
 increaseBtn.addEventListener('click', increaseQty);
 decreaseBtn.addEventListener('click', decreaseQty);

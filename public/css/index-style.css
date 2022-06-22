@@ -59,6 +59,22 @@ li {
     background-color: rgb(221, 200, 106);
 }
 
+.checkout-btn, .continue-shopping-btn {
+    color: rgb(255, 255, 255);
+    padding: 0.75em;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.checkout-btn {
+    background-color: rgb(221, 200, 106);
+}
+
+.continue-shopping-btn {
+    background-color: rgb(197, 153, 59);
+    margin-right: 1.5em;
+}
+
 .connect-btn {
     color:rgb(255, 255, 255);
     background-color: rgb(197, 153, 59);
@@ -66,6 +82,98 @@ li {
     padding: 0.2em 0;
     font-weight: 600;
     display: block;
+}
+
+#about-craftsman {
+    width: 100%;
+    padding: 1.5em;
+    margin-bottom: 2.5rem;
+    display: flex;
+}
+
+#about-craftsman .about-img {
+    width: 40%;
+}
+
+#about-craftsman .about-text {
+    width: 55%;
+    align-self: flex-start;
+}
+
+#about-craftsman .position {
+    font-size: 1.2rem;
+    margin-bottom: 1em;
+}
+
+#about-craftsman .desc {
+    margin-bottom: 1em;
+}
+
+#about-craftsman h4 {
+    font-size: 1.5rem;
+}
+
+#about-craftsman .address, #about-craftsman .telephone {
+    margin-bottom: 0.7em;
+}
+
+#cart {
+    width: 100%;
+    padding: 1.5em;
+    margin-bottom: 3em;
+}
+
+#cart .title {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.cart-head, .cart-items {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    border-bottom: 1px solid rgba(192, 192, 192, 0.455);
+}
+
+.cart-head {
+    background-color: rgba(192, 192, 192, 0.455);
+    color:rgb(117, 112, 112);
+    padding: 1.3rem;
+}
+
+.cart-items {
+    padding: 1em 1.5em 1.5em 0;
+    margin-bottom: 1em;
+}
+
+.cart-head div {
+    font-weight: 600;
+}
+
+.cart-head div:not(last-child), 
+.cart-items div:not(last-child) {
+    margin-right: 1.5em;
+}
+
+.cart-img img{
+    height: 100px;
+    object-fit: cover;
+}
+
+.item-id, .cart-name, .cart-price, .cart-qty,
+.cart-total-price {
+    align-self: center;
+}
+
+.total-amount {
+    float: right;
+    text-align: right;
+    font-weight: 600;
+}
+
+.cart-buttons::after {
+    content: '';
+    display: block;
+    clear: both;
 }
 
 header {
@@ -459,6 +567,17 @@ label {
     border: 1px solid rgba(192, 192, 192, 0.455);
     padding: 1em;
     box-shadow: 0.01em 0.01em 0.05em rgba(192, 192, 192, 0.455);
+}
+
+#profile {
+    width: 100%;
+    padding: 1.5em;
+    margin-bottom: 2em;
+}
+
+#profile .title {
+    margin-bottom: 1em;
+    text-align: center;
 }
 
 footer {

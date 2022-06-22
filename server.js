@@ -57,6 +57,18 @@ app.get('/craftsmanSignup', (req, res)=> {
     res.render('craftsmanSignup')
 })
 
+app.get('/craftsmanLogin', (req, res)=> {
+    res.render('craftsmanLogin')
+})
+
+app.get('/craftsmanDetail', (req, res)=> {
+    res.render('craftsmanDetail')
+})
+
+app.get('/profile', (req, res)=> {
+    res.render('profile')
+})
+
 app.get('/contact', (req, res)=> {
     res.render('contact')
 })
