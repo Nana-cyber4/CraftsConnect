@@ -40,46 +40,40 @@
             <li class="list-item"><a href="/index" class="nav-link">Home</a></li>
             <li class="list-item"><a href="/about" class="nav-link">About</a></li>
             <li class="list-item"><a href="/crafts" class="nav-link">Crafts</a></li>
-            <li class="list-item"><a href="/upload" class="nav-link">Upload</a></li>
+            <li class="list-item"><a href="/upload" class="nav-link active">Upload</a></li>
             <li class="list-item"><a href="/contact" class="nav-link">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Main -->
     <main>
-        <section id="profile">
-            <h2 class="title">Profile</h2>
+        <section id="upload">
+            <h2 class="title">Upload New Product</h2>
             <form action="" method="POST" class="form">
                 <div class="field">
-                    <span>
-                        <label for="firstname">First Name</label>
-                        <input type="text" class="input" id="firstname" value="Peter" required disabled>
-                    </span>
-                    <span>
-                        <label for="lastname">Last Name</label>
-                        <input type="text" class="input" id="lastname" value="Addai-Poku" required disabled>
-                    </span>
+                    <label for="product-name">Product name</label>
+                    <input type="product-name" name="" id="product-name" class="input" required>
                 </div>
                 <div class="field">
-                    <label for="email">Specified Craft</label>
-                    <input type="text" name="" id="email" class="input" value="Painter" required disabled>
+                    <label for="description">Description</label>
+                    <textarea type="text" name="" id="description" class="input" required></textarea>
                 </div>
                 <div class="field">
-                    <label for="address">Address</label>
-                    <input type="text" name="" id="subject" class="input" value="GIMPA - SOT, Accra-Ghana." required disabled>
+                    <label for="price">Price</label>
+                    <input type="number" name="" min="0" id="price" class="input" required>
                 </div>
                 <div class="field">
-                    <label for="gender">Gender</label>
-                    <select name="" id="gender" class="input" required disabled>
-                        <option value="None" selected>None</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                    </select>
+                    <label for="craft-type">Craft Type</label>
+                    <input type="craft-type" name="" id="craft-type" class="input" required>
                 </div>
-                <div class="buttons">
-                    <button type="button" class="btn edit-btn">Edit</button>
-                    <button type="submit" class="btn update-btn">Update</button disabled>    
+                <div class="field">
+                    <label for="product-img">Product</label>
+                    <input type="file" name="" id="product-img" accept="image/png, image/jpeg, image/svg" required>
                 </div>
+                <button class="btn msg-btn">Upload</button>
+                <!-- <p class="para-text">
+                    Already have an account. <a href="/craftsmanLogin" class="nav-link">Login here</a>
+                </p> -->
             </form>
         </section>
     </main>

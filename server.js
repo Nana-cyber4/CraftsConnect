@@ -69,6 +69,10 @@ app.get('/profile', (req, res)=> {
     res.render('profile')
 })
 
+app.get('/upload', (req, res)=> {
+    res.render('upload')
+})
+
 app.get('/contact', (req, res)=> {
     res.render('contact')
 })
